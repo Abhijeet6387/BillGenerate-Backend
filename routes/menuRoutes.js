@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Menu = require("../models/Menu");
 
-// Route to create a new menu item
+// Route to create new menu item
 router.post("/create-menu", async (req, res) => {
   try {
     const { name, price, description } = req.body;
