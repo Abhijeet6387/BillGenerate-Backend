@@ -21,7 +21,7 @@ router.post("/create-menu", async (req, res) => {
 // Route to fetch all menu items
 router.get("/allmenu", async (req, res) => {
   try {
-    const menuItems = await Menu.find();
+    const menuItems = await Menu.find().sort({ price: 1 });
     res.json(menuItems);
   } catch (error) {
     res.status(500).json({ error: "Error fetching menu items" });
